@@ -1,0 +1,27 @@
+@use 'sass:math';
+
+//coors
+$grayColor: rgb(240, 240, 243);
+$lightGray: rgb(248, 248, 255);
+$darkBlueColor: rgb(111, 111, 111);
+$blueColor: #63a5f1;
+$redColor: red;
+$whiteColor: rgb(255, 255, 255);
+
+
+//sizing
+$fontSize: 16;
+$commonPadding: 10px;
+
+
+@function rem($n) {
+  @return #{math.div($n, $fontSize)}rem;
+}
+
+@function percent($m, $k) {
+  @return math.div($m, math.div($k, 100)) + 0%;
+}
+
+
+
+
