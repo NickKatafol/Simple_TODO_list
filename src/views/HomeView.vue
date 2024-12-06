@@ -60,8 +60,8 @@ function addTask() {
           <span :class="{ 'row__text_done': item.isDone }" 
                 class="row__text"
           >
-          {{ item.text }}
-        </span>
+            {{ item.text }}
+          </span>
         </label>
         <button class="row__btn" 
                 @click="item.deleteSelf_binded"
