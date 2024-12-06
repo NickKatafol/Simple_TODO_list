@@ -42,25 +42,49 @@ function addTask() {
 
 <template>
   <div class="home-wrapper">
-    <div class="title">things to do:</div>
+    <div class="title">
+      things to do:
+    </div>
 
     <div class="list">
-      <div v-for="item of taskList" :key="item.id" v-memo="[item.isDone]" class="list__row">
+      <div v-for="item of taskList" 
+           :key="item.id" 
+           v-memo="[item.isDone]" 
+           class="list__row"
+      >
         <label class="row__text-block">
-          <input type="checkbox" v-model="item.isDone" class="row__chbox">
-          <span :class="{ 'row__text_done': item.isDone }" class="row__text">{{ item.text }}</span>
+          <input type="checkbox" 
+                 v-model="item.isDone" 
+                 class="row__chbox"
+          >
+          <span :class="{ 'row__text_done': item.isDone }" 
+                class="row__text"
+          >
+          {{ item.text }}
+        </span>
         </label>
-        <button class="row__btn" @click="item.deleteSelf_binded">&times;</button>
+        <button class="row__btn" 
+                @click="item.deleteSelf_binded"
+        >
+          &times;
+        </button>
       </div>
     </div>
 
     <div class="count">done: {{ store.doneCount }}</div>
 
-    <div class="alert" v-if="alertUp">Please enter Task</div>
+    <div class="alert" v-if="alertUp">
+      Please enter Task
+    </div>
 
     <div class="new-task">
-      <input type="text" v-model="newTaskText" :placeholder="inputPlaceholder">
-      <button class="new-task__btn" @click="addTask">add task</button>
+      <input type="text" 
+             v-model="newTaskText" 
+             :placeholder="inputPlaceholder"
+      >
+      <button class="new-task__btn" @click="addTask">
+        add task
+      </button>
     </div>
   </div>
 </template>
