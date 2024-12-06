@@ -51,6 +51,7 @@ function addTask() {
            :key="item.id" 
            v-memo="[item.isDone]" 
            class="list__row"
+           v-if="taskList.length"
       >
         <label class="row__text-block">
           <input type="checkbox" 
@@ -69,7 +70,11 @@ function addTask() {
           &times;
         </button>
       </div>
+      <div v-else class="empty-list">
+        Looks like you are done.
+      </div>
     </div>
+
 
     <div class="count">done: {{ store.doneCount }}</div>
 
@@ -142,6 +147,12 @@ function addTask() {
         margin-left: rem(4);
       }
     }
+  }
+
+  .empty-list {
+    color: $darkBlueColor;
+    text-align: center;
+    padding: rem(20) 0;
   }
 
   .count {
