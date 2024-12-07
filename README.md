@@ -16,6 +16,7 @@ npm run test:e2e:dev
 ```
 
 ....
+
       Project architecture under
       -Object Oriented Programming rules
       -SOLID Principals
