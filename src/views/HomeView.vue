@@ -36,6 +36,12 @@ function addTask() {
   newTaskTextBuffer.value = ''
 }
 
+function itemHolderForDelete(ev: Event){
+  if(ev.target?.dataset?.index){
+    const index: number = +ev.target.dataset.index
+    const item = taskList.value[index].deleteSelf_binded()
+  }
+}
 
 
 </script>
@@ -46,8 +52,8 @@ function addTask() {
       things to do:
     </div>
 
-    <div class="list">
-      <div v-for="item of taskList" 
+    <div class="list" @click="itemHolderForDelete">
+      <div v-for="(item, ind) of taskList" 
            :key="item.id" 
            v-memo="[item.isDone]" 
            class="list__row"
@@ -65,7 +71,7 @@ function addTask() {
           </span>
         </label>
         <button class="row__btn" 
-                @click="item.deleteSelf_binded"
+                :data-index="ind"
         >
           &times;
         </button>

@@ -16,6 +16,8 @@
       <br>Delete item itself(!) via the class instance method. It's unnecessary for a simple project but critical helpful
       for a real big project with complex JS logic.
       <br>
+      <br>Holding the clicl Event from several targets by only the one EventListeners. (itemHolderForDelete)
+      <br>
       <br>Pinia
       <br>
       <br>SCSS functions (rem, percent)
