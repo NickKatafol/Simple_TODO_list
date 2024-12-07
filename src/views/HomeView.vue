@@ -39,7 +39,7 @@ function addTask() {
 function itemHolderForDelete(ev: Event){
   if(ev.target?.dataset?.index){
     const index: number = +ev.target.dataset.index
-    const item = taskList.value[index].deleteSelf_binded()
+    taskList.value[index].deleteSelf_binded()
   }
 }
 
