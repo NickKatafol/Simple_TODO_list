@@ -9,6 +9,10 @@
 
 
     <div class="my-text">
+      <br>Project architecture under
+      <br>-Object Oriented Programming rules
+      <br>-SOLID Principals
+      <br>
       <br>TypeScript
       <br>
       <br>JS Class
