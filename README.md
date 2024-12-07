@@ -1,55 +1,46 @@
-# BLUNC_Dec-3
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+# ADT Chalenge Task
 
 ## Project Setup
 
 ```sh
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+## End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
 npm run test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+....
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
 
-```sh
-npm run build
-npm run test:e2e
-```
+      <br>TypeScript
+      <br>
+      <br>JS Class
+      <br>All of the manipulation with the Task goes VIA CLASS METHODS.
+      <br>Delete item itself(!) via the class instance method. It's unnecessary for a simple project but critical helpful
+      for a real big project with complex JS logic.
+      <br>
+      <br>Holding the click Event from several targets by only the one EventListeners. (itemHolderForDelete)
+      <br>Pick up the TaskInstanse and hold them WITHOUT using eny of an iteration circle.
+      <br>
+      <br>Pinia
+      <br>
+      <br>SCSS functions (rem, percent)
+      <br>SCSS variables
+      <br>SCSS classes structure
+      <br>SCSS @extend
+      <br>
+      <br>BEM
+      <br>flexbox
+      <br>v-memo directive for good project performance
+      <br>Resive the initial data from the external resource.
+      <br>
+      <br>End-to-end Tests (Cypress.io)
+    
+
+

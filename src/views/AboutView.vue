@@ -30,7 +30,8 @@
       <br>flexbox
       <br>v-memo directive for good project performance
       <br>Resive the initial data from the external resource.
-
+      <br>
+      <br>End-to-end Tests (Cypress.io) (npm run test:e2e:dev)
     </div>
   </div>
 </template>

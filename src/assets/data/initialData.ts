@@ -1,6 +1,6 @@
-import type { Task } from "@/Types/types";
+import type { ITask } from "@/Types/types";
 
-export const initialData: Omit<Task, 'id' | 'isDone'>[] = [
+export const initialData: Omit<ITask, 'id' | 'isDone'>[] = [
   {
     text: 'Greate job!',
   },
