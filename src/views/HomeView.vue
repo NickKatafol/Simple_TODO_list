@@ -16,9 +16,8 @@ const newTaskText = computed({
   },
   set(val: string) {
     newTaskTextBuffer.value = val
-    if (val) {
+    if (val)
       isAlert.value = false
-    }
   }
 })
 
@@ -110,7 +109,7 @@ function onItemHolderForDelete(ev: Event){
   }
 
   .list {
-    @extend .inner-conainer;
+    @extend .inner-container;
 
     &__row {
       display: flex;
@@ -173,7 +172,7 @@ function onItemHolderForDelete(ev: Event){
   }
 
   .new-task {
-    @extend .inner-conainer;
+    @extend .inner-container;
     display: flex;
 
     & input {
@@ -194,7 +193,7 @@ function onItemHolderForDelete(ev: Event){
   }
 }
 
-.inner-conainer {
+.inner-container {
   width: percent(150, 200);
   margin: 0 auto;
 }
