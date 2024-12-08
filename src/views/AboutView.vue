@@ -7,7 +7,6 @@
   <div class="about-wrapper">
     ABOUT
 
-
     <div class="my-text">
       <br>Project architecture under
       <br>-Object Oriented Programming rules

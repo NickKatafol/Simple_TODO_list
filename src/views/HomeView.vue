@@ -17,18 +17,18 @@ const newTaskText = computed({
   set(val: string) {
     newTaskTextBuffer.value = val
     if (val) {
-      alertUp.value = false
+      isAlert.value = false
     }
   }
 })
 
-const alertUp = ref<boolean>(false)
+const isAlert = ref<boolean>(false)
 
 const inputPlaceholder = ref<string>('Enter new task')
 
-function addTask() {
+function onAddTask() {
   if (!newTaskTextBuffer.value) {
-    alertUp.value = true
+    isAlert.value = true
     return
   }
 
@@ -36,7 +36,7 @@ function addTask() {
   newTaskTextBuffer.value = ''
 }
 
-function itemHolderForDelete(ev: Event){
+function onItemHolderForDelete(ev: Event){
   if(ev.target?.dataset?.index){
     const index: number = +ev.target.dataset.index
     taskList.value[index].deleteSelf_binded()
@@ -52,7 +52,7 @@ function itemHolderForDelete(ev: Event){
       things to do:
     </div>
 
-    <div class="list" @click="itemHolderForDelete">
+    <div class="list" @click="onItemHolderForDelete">
       <div v-for="(item, ind) of taskList" 
            :key="item.id" 
            v-memo="[item.isDone]" 
@@ -84,7 +84,7 @@ function itemHolderForDelete(ev: Event){
 
     <div class="count">done: {{ store.doneCount }}</div>
 
-    <div class="alert" v-if="alertUp">
+    <div class="alert" v-if="isAlert">
       Please enter Task
     </div>
 
@@ -93,7 +93,7 @@ function itemHolderForDelete(ev: Event){
              v-model="newTaskText" 
              :placeholder="inputPlaceholder"
       >
-      <button class="new-task__btn" @click="addTask">
+      <button class="new-task__btn" @click="onAddTask">
         add task
       </button>
     </div>
