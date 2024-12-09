@@ -5,9 +5,9 @@
 ![Chalenge Task](/src/assets/data/task.gif "Chalenge Task")
 
 Additional objectives:
--Scalability
--Performance
--Reliability
+- Scalability
+- Performance
+- Reliability
 
 ## Project Setup
 
