@@ -46,6 +46,11 @@ import task from "@/assets/data/task.gif";
     <br>Resive the initial data from the mocked external resource.
     <br>
     <br>End-to-end Tests (Cypress.io) (npm run test:e2e:dev)
+
+    <h3># Resume</h3>
+    It's the Senior Engineer work. 
+    <br>NOT the fast experienced Junior Programmer code writing.
+    <br>
   </div>
 </template>
 

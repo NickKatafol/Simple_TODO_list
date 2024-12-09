@@ -27,7 +27,7 @@ npm run dev
 npm run test:e2e:dev
 ```
 
-....
+## Realisation
 
       Project architecture under
       -Object Oriented Programming rules
@@ -56,6 +56,12 @@ npm run test:e2e:dev
       Resive the initial data from the mocked  external resource.
       
       End-to-end Tests (Cypress.io)
+
+
+ ## Resume
+
+      It's the Senior Engineer work. 
+      NOT the fast experienced Junior Programmer code writing.
     
 
 
