@@ -33,10 +33,10 @@ import task from "@/assets/data/task.gif";
     <br>
     <br>Pinia
     <br>
-    <br>SCSS functions (rem, percent)
+    <br>SCSS custom functions (rem, percent)
     <br>SCSS variables
     <br>SCSS classes structure
-    <br>SCSS @extend
+    <br>SCSS Directives
     <br>
     <br>BEM
     <br>flexbox

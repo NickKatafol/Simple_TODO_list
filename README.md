@@ -42,10 +42,10 @@ npm run test:e2e:dev
       
       Pinia
       
-      SCSS functions (rem, percent)
+      SCSS custom functions (rem, percent)
       SCSS variables
       SCSS classes structure
-      SCSS @extend
+      SCSS Directives
       
       BEM
       flexbox
