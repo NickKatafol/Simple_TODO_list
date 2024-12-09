@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTaskStore } from '@/stores/taskStore';
 import { storeToRefs } from 'pinia';
-import { ref, computed } from 'vue';
+import { ref, computed, type Ref } from 'vue';
 
 
 const store = useTaskStore()

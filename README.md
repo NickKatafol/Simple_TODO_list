@@ -1,5 +1,14 @@
 # ADT Chalenge Task
 
+## To-Do App Preview
+
+![Chalenge Task](/src/assets/data/task.gif "Chalenge Task")
+
+Additional objectives:
+-Scalability
+-Performance
+-Reliability
+
 ## Project Setup
 
 ```sh
