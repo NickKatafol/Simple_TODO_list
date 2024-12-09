@@ -50,7 +50,7 @@ npm run test:e2e:dev
       BEM
       flexbox
       v-memo directive for good project performance
-      Resive the initial data from the external resource.
+      Resive the initial data from the mocked  external resource.
       
       End-to-end Tests (Cypress.io)
     
