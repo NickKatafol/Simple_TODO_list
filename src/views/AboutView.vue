@@ -1,56 +1,17 @@
 <script setup lang="ts">
-import task from "@/assets/data/task.gif";
+import markdown from 'markdown-it'
+import README from '../../README.md?raw'
+
+const md = markdown({html: false, assetsInclude: true})
+const mdText = md.render(README)
 
 
 </script>
 
 <template>
-  <div class="about-wrapper">
-    <h3># Objectives</h3>
-
-    <img src='@/assets/data/task.gif' class="logo" alt="logo" />
-
-    <br>Additional objectives:
-    <br>-Scalability
-    <br>-Performance
-    <br>-Reliability
-    <br>
-    <br>- validation the typing text agenst the empty string
-    <br>- adding the Task by hiting the Enter
-
-    <h3># Realisation:</h3>
-    Project architecture under
-    <br>-Object Oriented Programming rules
-    <br>-SOLID Principals
-    <br>
-    <br>TypeScript
-    <br>
-    <br>JS Class
-    <br>All of the manipulation with the Task goes VIA CLASS METHODS.
-    <br>Delete item itself(!) via the class instance method. It's unnecessary for a simple project but critical helpful
-    for a real big project with complex JS logic.
-    <br>
-    <br>Holding the click Event from several targets by only the one EventListeners. (itemHolderForDelete)
-    <br>Pick up the TaskInstanse and hold them WITHOUT using eny of an iteration circle.
-    <br>
-    <br>Pinia
-    <br>
-    <br>SCSS custom functions (rem, percent)
-    <br>SCSS variables
-    <br>SCSS classes structure
-    <br>SCSS Directives
-    <br>
-    <br>BEM
-    <br>flexbox
-    <br>v-memo directive for good project performance
-    <br>Resive the initial data from the mocked external resource.
-    <br>
-    <br>End-to-end Tests (Cypress.io) (npm run test:e2e:dev)
-
-    <h3># Resume</h3>
-    It's the Senior Engineer work. 
-    <br>NOT the fast experienced Junior Programmer code writing.
-    <br>
+  <div class="about-wrapper"
+       v-html="mdText"
+  >
   </div>
 </template>
 
