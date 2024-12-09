@@ -15,6 +15,8 @@ import task from "@/assets/data/task.gif";
     <br>-Performance
     <br>-Reliability
     <br>
+    <br>- validation the typing text agenst the empty string
+    <br>- adding the Task by hiting the Enter
 
     <h3># Realisation:</h3>
     Project architecture under

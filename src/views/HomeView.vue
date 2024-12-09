@@ -91,8 +91,11 @@ function onItemHolderForDelete(ev: Event){
       <input type="text" 
              v-model="newTaskText" 
              :placeholder="inputPlaceholder"
+             @keyup.enter="onAddTask"
       >
-      <button class="new-task__btn" @click="onAddTask">
+      <button class="new-task__btn" 
+              @click="onAddTask"
+      >
         add task
       </button>
     </div>

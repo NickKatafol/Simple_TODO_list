@@ -9,6 +9,9 @@ Additional objectives:
 - Performance
 - Reliability
 
+- validation the typing text agenst the empty string
+- adding the Task by hiting the Enter
+
 ## Project Setup
 
 ```sh
