@@ -1,5 +1,3 @@
-# ADT Chalenge Task
-
 ## To-Do App Preview
 
 ![Chalenge Task](/src/assets/data/task.gif "Chalenge Task")
@@ -33,9 +31,9 @@ npm run test:e2e:dev
 
       TypeScript
       
-      JS Class
-      All of the manipulation with the Task goes VIA CLASS METHODS.
-      Delete item itself via the class instance method. It's unnecessary for a simple project but critical helpful for a real big project with complex JS logic.
+      ES6 Class
+      All of the manipulations with the Task goes VIA CLASS METHODS.
+      Delete the Task item itself via the class instance method. It's unnecessary for a simple project but critical helpful for a real big project with a complex JS logic.
             
       Holding the click Event from several targets by only the one EventListeners. (itemHolderForDelete)
       Adding the Task by hiting the Enter.
