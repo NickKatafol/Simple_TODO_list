@@ -11,8 +11,6 @@ Additional objectives:
 ## Project Setup
 
 ```sh
-cd app
-
 npm install
 
 npm run dev
@@ -22,8 +20,6 @@ npm run dev
 ## End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
-cd app
-
 npm run test:e2e:dev
 ```
 
