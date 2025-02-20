@@ -35,7 +35,7 @@ function onAddTask() {
   newTaskTextBuffer.value = ''
 }
 
-function onItemHolderForDelete(ev: Event){
+function onItemHolderForDelete(ev: any){
   if(ev.target?.dataset?.index){
     const index: number = +ev.target.dataset.index
     taskList.value[index].deleteSelf_binded()
@@ -122,6 +122,7 @@ function onItemHolderForDelete(ev: Event){
 
       .row__text-block {
         display: flex;
+        flex: 1;
         align-items: center;
         padding-right: rem(4);
         cursor: pointer;

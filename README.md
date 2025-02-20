@@ -11,6 +11,8 @@ Additional objectives:
 ## Project Setup
 
 ```sh
+cd app
+
 npm install
 
 npm run dev
@@ -20,6 +22,8 @@ npm run dev
 ## End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
+cd app
+
 npm run test:e2e:dev
 ```
 
@@ -33,11 +37,15 @@ npm run test:e2e:dev
       
       ES6 Class
       All of the manipulations with the Task goes VIA CLASS METHODS.
-      Delete the Task item itself via the class instance method. It's unnecessary for a simple project but critical helpful for a real big project with a complex JS logic.
+      Delete the Task item itself via the class instance method. 
+      It's unnecessary for a simple project but critical helpful 
+      for a real big project with a complex JS logic.
             
-      Holding the click Event from several targets by only the one EventListeners. (itemHolderForDelete)
+      Holding the click Event from several targets by only the one 
+      EventListeners. (itemHolderForDelete)
       Adding the Task by hiting the Enter.
-      Pick up the TaskInstanse and hold them WITHOUT using eny of an iteration circle.
+      Pick up the TaskInstanse and hold them WITHOUT using eny of 
+      an iteration circle.
       Validation the typing text agenst the empty string.
       
       Pinia

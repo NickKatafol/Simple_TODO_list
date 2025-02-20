@@ -2,7 +2,7 @@
 import markdown from 'markdown-it'
 import README from '../../README.md?raw'
 
-const md = markdown({html: false, assetsInclude: true})
+const md = markdown({html: false})
 const mdText = md.render(README)
 
 
@@ -25,4 +25,5 @@ const mdText = md.render(README)
   height: rem(300);
   pointer-events: none;
 }
+
 </style>
