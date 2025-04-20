@@ -31,7 +31,7 @@ describe('Progect is runing successfully', () => {
 
   it('Creating the new Task with the empty input, the Alert appire', () => {
     cy.get('.home-wrapper')
-      .should('not.contain', 'Please enter Task')
+      .should('not.contain', 'Please enter the Task')
   
     cy.get('.new-task > input')
       .click()
@@ -40,7 +40,7 @@ describe('Progect is runing successfully', () => {
     cy.get('.new-task__btn')
     .click()
 
-    cy.contains('.home-wrapper', 'Please enter Task')
+    cy.contains('.home-wrapper', 'Please enter the Task')
   })
 
   it('Delete the Task', () => {

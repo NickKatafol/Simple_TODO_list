@@ -84,7 +84,7 @@ function onItemHolderForDelete(ev: any){
     <div class="count">done: {{ store.doneCount }}</div>
 
     <div class="alert" v-if="isAlert">
-      Please enter Task
+      Please enter the Task
     </div>
 
     <div class="new-task">

@@ -1,4 +1,4 @@
-## To-Do App Preview
+## To_Do App
 
 ![Chalenge Task](/src/assets/data/task.gif "Chalenge Task")
 
@@ -25,13 +25,13 @@ npm run test:e2e:dev
 
 ## Realisation
 
-      Project architecture under
+      Project **Architecture** under
       -Object Oriented Programming rules
       -SOLID Principals
 
-      TypeScript
+      **TypeScript**
       
-      ES6 Class
+      **ES6 Class**
       All of the manipulations with the Task goes VIA CLASS METHODS.
       Delete the Task item itself via the class instance method. 
       It's unnecessary for a simple project but critical helpful 
@@ -46,6 +46,7 @@ npm run test:e2e:dev
       
       Pinia
       
+      **SCSS**
       SCSS custom functions (rem, percent)
       SCSS variables
       SCSS classes structure
@@ -56,13 +57,10 @@ npm run test:e2e:dev
       v-memo directive for good project performance
       Resive the initial data from the mocked  external resource.
       
+      **Tests**
       End-to-end Tests (Cypress.io)
 
+      
 
- ## Resume
-
-      It's the Senior Engineer development. 
-      NOT the fast experienced Junior Programmer code writing.
-    
 
 
