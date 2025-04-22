@@ -21,10 +21,11 @@ spec:
         name: todo
         env: 
         - name: VITE_DATA
-          value: nick_k8s 
+          valueFrom:
+            secretKeyRef:
+              name: vite-sec
+              key: vite_data
         resources: {}
       imagePullSecrets:
       - name: my-registry-key
 
-
-        
