@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todo
+  name: todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+      - image: nickkatafol/nick_docker_image:todo_port80_VITE_DATA
+        imagePullPolicy: Always
+        name: todo
+        env: 
+        - name: VITE_DATA
+          value: nick_k8s 
+        resources: {}
+      imagePullSecrets:
+      - name: my-registry-key
+
+
+        

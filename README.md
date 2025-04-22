@@ -9,7 +9,7 @@
 
 
 
-## Project Setup
+## Project Setup locally
 
 ```sh
 npm install
@@ -24,6 +24,46 @@ npm run dev
 ```sh
 npm run test:e2e:dev
 ```
+
+
+
+## Build a Docker Image
+
+```
+docker build -t nickkatafol/nick_docker_image:todo_port80_VITE_DATA .
+
+
+# run the Image localy
+
+docker run -e VITE_DATA=run -p 8080:80 nickkatafol/nick_docker_image:todo_port80_VITE_DATA
+
+
+# push on DockerHub
+
+docker login -u nick.katafol@gmail.com --password-stdin
+
+docker push nickkatafol/nick_docker_image:todo_port80_VITE_DATA
+
+```
+
+
+
+## Deploy on a kubernetes Cluster, Minikube
+
+```
+minikube start --driver=docker
+
+alias kubectl="minikube kubectl --"
+
+kubectl apply -k kubernetes/
+
+
+# assigne the Minikube Exernal_IP:PORT to the "todo-svc" Service
+
+minikube service todo-svc
+
+```
+
 
 
 
