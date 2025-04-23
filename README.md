@@ -55,7 +55,7 @@ minikube start --driver=docker
 
 alias kubectl="minikube kubectl --"
 
-kubectl apply -k kubernetes/
+kubectl apply -f kubernetes/
 
 
 # assigne the Minikube Exernal_IP:PORT to the "todo-svc" Service
@@ -91,10 +91,10 @@ Holding the click Event from several targets by only the one EventListeners (ite
 
 Adding the Task by hiting the Enter.
 
-Pick up the TaskInstanse and hold them WITHOUT using eny of 
-an iteration circle.
+Pick up the TaskInstanse and hold them WITHOUT using eny of iteration loops.
 
 Validation the typing text agenst the empty string.
+
 
 
 #### Pinia
@@ -129,6 +129,12 @@ End-to-end Tests (Cypress.io)
 Create a Docker Image
 
 Throw the env_var "VITE_DATA" over the Docker Container
+
+
+### Deploy the Progect on a Cluster
+
+Deploy the Progect on a Kubernetes Cluster
+
 
 
 
