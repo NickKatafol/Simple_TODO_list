@@ -15,15 +15,7 @@ const mdText = md.render(README)
   </div>
 </template>
 
-<style lang="scss" scoped>
-.about-wrapper {
-  padding: rem(6) 0;
-}
 
-.logo {
-  width: rem(600);
-  height: rem(300);
-  pointer-events: none;
-}
-
+<style scoped>
 </style>
+

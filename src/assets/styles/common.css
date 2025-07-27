@@ -1,5 +1,5 @@
 html {
-  font-size: $fontSize + px;
+  font-size: 16 px;
 }
 
 *, *:before, *:after {

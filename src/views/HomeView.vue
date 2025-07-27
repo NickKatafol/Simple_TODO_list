@@ -23,7 +23,7 @@ const newTaskText = computed({
 
 const isAlert = ref<boolean>(false)
 
-const inputPlaceholder = ref<string>('Enter new task')
+const inputPlaceholder = 'Enter a new task'
 
 function onAddTask() {
   if (!newTaskTextBuffer.value) {
@@ -35,8 +35,8 @@ function onAddTask() {
   newTaskTextBuffer.value = ''
 }
 
-function onItemHolderForDelete(ev: any){
-  if(ev.target?.dataset?.index){
+function onItemHolderForDelete(ev: any) {
+  if (ev.target?.dataset?.index) {
     const index: number = +ev.target.dataset.index
     taskList.value[index].deleteSelf_binded()
   }
@@ -46,166 +46,50 @@ function onItemHolderForDelete(ev: any){
 </script>
 
 <template>
-  <div class="home-wrapper">
-    <div class="title">
-      things to do:
+  <div class="font-bold uppercase text-center text-2xl py-4">
+    things to do:
+  </div>
+
+  <div class="w-full px-12 border-t-1 border-solid border-t-gray-300 py-4" @click="onItemHolderForDelete">
+    <div v-for="(item, ind) of taskList" :key="item.id" v-memo="[item.isDone]" class="flex items-center justify-between"
+      v-if="taskList.length">
+      <label
+        class="flex flex-1 items-center cursor-pointer mr-2 py-2 hover:bg-green-200 transition-colors duration-200">
+        <input type="checkbox" v-model="item.isDone" class="mr-2">
+        <span :class="{ 'line-through': item.isDone }" class="flex-1">
+          {{ item.text }}
+        </span>
+      </label>
+      <button
+        class="cursor-pointer p-2 transition-colors duration-100  bg-gray-400 opacity-75 hover:bg-gray-300 w-6 h-6 flex items-center justify-center"
+        :data-index="ind">
+        &times;
+      </button>
     </div>
 
-    <div class="list" @click="onItemHolderForDelete">
-      <div v-for="(item, ind) of taskList" 
-           :key="item.id" 
-           v-memo="[item.isDone]" 
-           class="list__row"
-           v-if="taskList.length"
-      >
-        <label class="row__text-block">
-          <input type="checkbox" 
-                 v-model="item.isDone" 
-                 class="row__chbox"
-          >
-          <span :class="{ 'row__text_done': item.isDone }" 
-                class="row__text"
-          >
-            {{ item.text }}
-          </span>
-        </label>
-        <button class="row__btn" 
-                :data-index="ind"
-        >
-          &times;
-        </button>
-      </div>
-      <div v-else class="empty-list">
-        Looks like you are done.
-      </div>
+    <div v-else class="empty-list">
+      Looks like you are done.
     </div>
+  </div>
 
-
-    <div class="count">done: {{ store.doneCount }}</div>
-
-    <div class="alert" v-if="isAlert">
+  <div class="w-full px-12 border-t-1 border-solid border-t-gray-300 py-4">
+    <div class="font-bold uppercase text-center text-2xl py-4">
+      done: {{ store.doneCount }}
+    </div>
+    <div class="text-red-600" v-if="isAlert">
       Please enter the Task
     </div>
 
-    <div class="new-task">
-      <input type="text" 
-             v-model="newTaskText" 
-             :placeholder="inputPlaceholder"
-             @keyup.enter="onAddTask"
-      >
-      <button class="new-task__btn" 
-              @click="onAddTask"
-      >
-        add task
+    <div class="flex">
+      <input type="text" v-model="newTaskText" :placeholder="inputPlaceholder" @keyup.enter="onAddTask"
+        :required="isAlert" class="block flex-1 p-2 mr-1 border border-gray-400
+              focus:outline-lime-600 invalid:border-red-600">
+      <button class="text-white cursor-pointer p-2 transition-colors bg-blue-600 hover:bg-blue-400 duration-100"
+        @click="onAddTask">
+        add the task
       </button>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-.home-wrapper {
-  padding: rem(20) 0;
-
-  .title {
-    @extend .title-text;
-    border-bottom: $grayColor 1px solid;
-  }
-
-  .list {
-    @extend .inner-container;
-
-    &__row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: rem(6) 0;
-
-      .row__text-block {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        padding-right: rem(4);
-        cursor: pointer;
-
-        &:hover {
-          background-color: $lightGray;
-        }
-
-        .row__chbox {
-          width: rem(20);
-          height: rem(20);
-          margin-right: rem(4);
-        }
-
-        .row__text {
-          flex: 1;
-        }
-
-        .row__text_done {
-          text-decoration: line-through;
-        }
-      }
-
-      .row__btn {
-        width: rem(20);
-        height: rem(20);
-        font-size: rem(16);
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-        margin-left: rem(4);
-      }
-    }
-  }
-
-  .empty-list {
-    color: $darkBlueColor;
-    text-align: center;
-    padding: rem(20) 0;
-  }
-
-  .count {
-    @extend .title-text;
-    border-top: $grayColor 1px solid;
-  }
-
-  .alert {
-    width: 70%;
-    margin: 0 auto;
-    color: $redColor;
-  }
-
-  .new-task {
-    @extend .inner-container;
-    display: flex;
-
-    & input {
-      flex: 1;
-      margin-right: rem(4);
-    }
-
-    &__btn {
-      background: $blueColor;
-      border: none;
-      color: $whiteColor;
-      text-transform: uppercase;
-      font-weight: 700;
-      text-align: center;
-      padding: $commonPadding;
-      cursor: pointer;
-    }
-  }
-}
-
-.inner-container {
-  width: percent(150, 200);
-  margin: 0 auto;
-}
-
-.title-text {
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  padding: $commonPadding;
-}
-</style>
+<style scoped></style>

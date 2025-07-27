@@ -100,18 +100,9 @@ Validation the typing text agenst the empty string.
 #### Pinia
 
 
-#### SCSS
+#### CSS
 
-SCSS custom functions (rem, percent)
-
-SCSS variables
-
-SCSS classes structure
-
-SCSS Directives
-
-
-BEM
+Tailwind v3
 
 flexbox
 

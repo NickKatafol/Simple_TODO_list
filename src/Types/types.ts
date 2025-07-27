@@ -18,8 +18,10 @@ export class Task implements ITask{
   deleteSelf(id: number) {
     //@ts-ignore
     const itemIndex = this.value.findIndex(item => item.id === id)
-    //@ts-ignore
-    this.value.splice(itemIndex, 1)
+
+    if(itemIndex !== -1)
+      //@ts-ignore
+      this.value.splice(itemIndex, 1)
   }
 }
 

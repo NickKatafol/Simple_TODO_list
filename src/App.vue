@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-
-import { ref } from 'vue'
+import { RouterLink, RouterView } from "vue-router";
+import { ref } from "vue";
 
 const VITE_DATA = ref(import.meta.env.VITE_DATA)
 
@@ -9,16 +8,16 @@ const VITE_DATA = ref(import.meta.env.VITE_DATA)
 </script>
 
 <template>
-  <div class="app-wrapper">
-    <nav>
-      <RouterLink to="/">Home</RouterLink> 
-      <span>|</span>
-      <RouterLink to="/about">About</RouterLink>
+  <div class="w-[100%] max-w-180 mx-auto">
+    <nav class="flex py-4">
+      <RouterLink to="/" class="text-purple-900 visited:text-purple-600 hover:text-purple-400 transition-colors duration-200">Home</RouterLink>
+      <span class="mx-3">|</span>
+      <RouterLink to="/about" class="visited:text-purple-600 hover:text-purple-400 transition-colors duration-200">About</RouterLink>
 
-      <span>VITE_DATA = {{ VITE_DATA }}</span>
+      <span class="ml-auto">VITE_DATA = {{ VITE_DATA }}</span>
     </nav>
 
-    <hr>
+    <hr />
 
     <Suspense>
       <RouterView />
@@ -26,23 +25,7 @@ const VITE_DATA = ref(import.meta.env.VITE_DATA)
   </div>
 </template>
 
-<style scoped lang="scss">
-.app-wrapper {
-  width: 100%;
-  max-width: rem(600);
-  margin: 0 auto;
-
-  nav {
-    display: flex;
-
-    & :nth-child(2) {
-      margin: 0 rem(4);
-    }
-
-    span {
-      margin-left: auto;
-    }
-  }
-
-}
+<style scoped>
 </style>
+
+
