@@ -102,7 +102,7 @@ Validation the typing text agenst the empty string.
 
 #### CSS
 
-Tailwind v3
+Tailwind v4.1
 
 flexbox
 
